@@ -1,11 +1,20 @@
 
-# Output for Approach 1 (Using count and tags)
-output "ec2_public_ips" {
-  value = aws_instance.ec2_with_terraform[*].public_ip # List is given because of the count parameter in aws_instance
+output "ec2_instance_ids" {
+  description = "IDs of the created EC2 instances"
+  value       = aws_instance.this[*].id
 }
 
+output "ec2_public_ips" {
+  description = "Public IPs of the created EC2 instances"
+  value       = aws_instance.this[*].public_ip
+}
 
-# Output for Approach 2 (Using for_each and locals)
-# output "ec2_public_ips" {
-#   value = [for instance in aws_instance.ec2_with_terraform : instance.public_ip]
-# }
+output "s3_bucket_name" {
+  description = "Name of the created S3 bucket"
+  value       = aws_s3_bucket.this.bucket
+}
+
+output "dynamodb_table_name" {
+  description = "Name of the DynamoDB table used for state locking"
+  value       = aws_dynamodb_table.this.name
+}
