@@ -5,7 +5,7 @@ aws_region = "ap-south-1"
 instance_type = "t2.micro"
 
 # Number of EC2 instances to create
-instance_count = 1
+instance_count = 3
 
 # AMI ID for EC2 instance
 ami_id = "ami-0f918f7e67a3323f0"
