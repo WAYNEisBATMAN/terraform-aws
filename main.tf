@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "awss3bucket" {
-  bucket = "one-piece-treasure" # Replace with a globally unique bucket name also lowercase letters only
+  bucket = var.bucket_name # Replace with a globally unique bucket name also lowercase letters only
 
   tags = {
     Name        = "MyS3Bucket"
