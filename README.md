@@ -22,6 +22,12 @@ This project provisions AWS resources using Terraform, demonstrating Infrastruct
 - [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) configured
 - AWS credentials set up (via environment variables or `~/.aws/credentials`)
 
+create group
+create user
+aws configure
+for this to work as default profile dont add profile in provider block. or the access and secret keys.
+
+
 ---
 
 ## 📂 Project Structure
