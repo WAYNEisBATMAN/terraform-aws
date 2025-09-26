@@ -2,7 +2,8 @@
 
 ## 📌 Overview
 
-This project provisions AWS resources using Terraform, demonstrating Infrastructure as Code (IaC) best practices. It includes EC2 instances, an S3 bucket, and DynamoDB for state locking.
+This project provisions AWS resources using Terraform, demonstrating Infrastructure as Code (IaC) best practices. 
+It includes EC2 instances, an S3 bucket, and DynamoDB for state locking.
 
 ---
 
