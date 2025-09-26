@@ -25,6 +25,15 @@ It includes EC2 instances, an S3 bucket, and DynamoDB table for state locking.
 - AWS credentials configured (we’ll use the **default profile** option with `~/.aws/credentials`)  
 
 ---
+- Terraform checks for AWS credentials in this order:
+
+- Environment variables (AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_SESSION_TOKEN)
+
+- AWS CLI credentials file (~/.aws/credentials)
+
+- EC2 Instance Metadata Service (IMDS) (when running inside an EC2 instance with an attached IAM role)
+
+- We’ll use the second option. To set it up as shown below:
 
 ## 🔑 Setting up AWS Credentials
 
@@ -51,7 +60,7 @@ It includes EC2 instances, an S3 bucket, and DynamoDB table for state locking.
 
    ```
 
-👉 Important: Use the default profile by:
+👉 Important: For the AWS Credentials Use the default profile by:
 
 Not specifying profile in the Terraform provider block
 
