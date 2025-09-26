@@ -2,7 +2,8 @@
 
 ## 📌 Overview
 
-This project provisions AWS resources using Terraform, demonstrating Infrastructure as Code (IaC) best practices. 
+This project provisions AWS resources using Terraform, demonstrating Infrastructure as Code (IaC) best practices.
+
 It includes EC2 instances, an S3 bucket, and DynamoDB for state locking.
 
 ---
@@ -27,7 +28,6 @@ create group
 create user
 aws configure
 for this to work as default profile dont add profile in provider block. or the access and secret keys.
-
 
 ---
 
