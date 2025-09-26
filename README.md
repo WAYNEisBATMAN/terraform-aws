@@ -25,17 +25,18 @@ It includes EC2 instances, an S3 bucket, and DynamoDB table for state locking.
 - AWS credentials configured (we’ll use the **default profile** option with `~/.aws/credentials`)  
 
 ---
+## 🔑 Setting up AWS Credentials
+
 - Terraform checks for AWS credentials in this order:
 
-- Environment variables (AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_SESSION_TOKEN)
+1) Environment variables (AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_SESSION_TOKEN)
 
-- AWS CLI credentials file (~/.aws/credentials)
+2) AWS CLI credentials file (~/.aws/credentials)
 
-- EC2 Instance Metadata Service (IMDS) (when running inside an EC2 instance with an attached IAM role)
+3) EC2 Instance Metadata Service (IMDS) (when running inside an EC2 instance with an attached IAM role)
 
 - We’ll use the second option. To set it up as shown below:
 
-## 🔑 Setting up AWS Credentials
 
 1. **Create a Group**  
    - Go to [IAM → User groups](https://console.aws.amazon.com/iamv2/home#/groups)  
