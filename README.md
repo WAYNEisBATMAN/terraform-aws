@@ -35,7 +35,7 @@ It includes EC2 instances, an S3 bucket, and DynamoDB table for state locking.
 
 3) EC2 Instance Metadata Service (IMDS) (when running inside an EC2 instance with an attached IAM role)
 
-- We’ll use the second option. To set it up as shown below:
+- We’ll use the 2nd method. To set it up:
 
 
 1. **Create a Group**  
