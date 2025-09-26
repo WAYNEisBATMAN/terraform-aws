@@ -1,4 +1,4 @@
-# Terraform AWS Project
+# ☁️ Terraform AWS Project
 
 ## 📌 Overview
 
@@ -126,7 +126,7 @@ terraform-aws/
 
 ---
 
-## 📸 Screenshots
+## 📸 Screenshots (Proof of Work)
 
 Below are sample outputs of Terraform commands:  
 
