@@ -4,7 +4,7 @@
 
 This project provisions AWS resources using Terraform, demonstrating Infrastructure as Code (IaC) best practices.
 
-It includes EC2 instances, an S3 bucket, and DynamoDB for state locking.
+It includes EC2 instances, an S3 bucket, and DynamoDB table for state locking.
 
 ---
 
@@ -20,14 +20,44 @@ It includes EC2 instances, an S3 bucket, and DynamoDB for state locking.
 
 ## 🛠️ Prerequisites
 
-- [Terraform](https://developer.hashicorp.com/terraform/downloads) >= 1.12
-- [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) configured
-- AWS credentials set up (via environment variables or `~/.aws/credentials`)
+- [Terraform](https://developer.hashicorp.com/terraform/downloads) >= 1.12  
+- [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) installed and configured 
+- AWS credentials configured (we’ll use the **default profile** option with `~/.aws/credentials`)  
 
-create group
-create user
-aws configure
-for this to work as default profile dont add profile in provider block. or the access and secret keys.
+---
+
+## 🔑 Setting up AWS Credentials
+
+1. **Create a Group**  
+   - Go to [IAM → User groups](https://console.aws.amazon.com/iamv2/home#/groups)  
+   - Click **Create group**  
+   - Assign required policies (e.g., `AmazonEC2FullAccess`, `AmazonS3FullAccess`, `AmazonDynamoDBFullAccess`)  
+
+2. **Create a User**  
+   - Go to [IAM → Users](https://console.aws.amazon.com/iamv2/home#/users)  
+   - Click **Add user**  
+   - Enable **Programmatic access**  
+   - Add the user to the group created above  
+   - Save the **Access Key ID** and **Secret Access Key**  
+
+3. **Run AWS Configure**  
+   ```bash
+   aws configure
+   ```
+
+Provide:
+
+Access Key ID
+Secret Access Key
+Default region (e.g., ap-south-1)
+Output format (choose one of the options or enter to skip)   
+
+
+👉 Important: Use the default profile by:
+
+Not specifying profile in the Terraform provider block
+
+Not hardcoding access keys in Terraform code
 
 ---
 
@@ -36,7 +66,7 @@ for this to work as default profile dont add profile in provider block. or the a
 ```
 terraform-aws/
 ├── main.tf              # AWS resources (EC2, S3, DynamoDB)
-├── outputs.tf           # Terraform outputs (instance IDs, bucket name, etc.)
+├── outputs.tf           # Terraform outputs (instance IDs, instance bucket name, etc.)
 ├── providers.tf         # AWS provider configuration
 ├── README.md            # Project documentation
 ├── terraform.tfvars     # Input values for the variables
