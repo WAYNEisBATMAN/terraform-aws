@@ -131,10 +131,10 @@ terraform-aws/
 Below are sample outputs of Terraform commands:  
 
 ### 🚀 Terraform Apply  
-![Terraform Apply Output](screenshots/terraform-apply-output.png)
+![Terraform Apply Output](screenshots/terraform-apply.png)
 
 ### 🗑️ Terraform Destroy  
-![Terraform Destroy Output](screenshots/terraform-destroy-output.png)
+![Terraform Destroy Output](screenshots/terraform-destroy.png)
 
 
 ---
