@@ -43,7 +43,7 @@ It includes EC2 instances, an S3 bucket, and DynamoDB table for state locking.
 3. **Run AWS Configure**  
    ```bash
    aws configure
-   # Provide below info:
+   # Then it will prompt you to provide below details which you got in step 2:
    Access Key ID
    Secret Access Key
    Default region (e.g., ap-south-1)
