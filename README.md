@@ -134,7 +134,7 @@ Below are sample outputs of Terraform commands:
 ![Terraform Apply Output](screenshots/terraform-apply-output.png)
 
 ### 🗑️ Terraform Destroy  
-<!-- ![Terraform Destroy Output](screenshots/terraform-destroy-output.png) -->
+![Terraform Destroy Output](screenshots/terraform-destroy-output.png)
 
 
 ---
