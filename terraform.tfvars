@@ -7,7 +7,7 @@ instance_type = "t2.micro"
 # Number of EC2 instances to create
 instance_count = 3
 
-# AMI ID for EC2 instance
+# AMI ID for Ubuntu EC2 instance
 ami_id = "ami-0f918f7e67a3323f0"
 
 # Globally unique S3 bucket name
